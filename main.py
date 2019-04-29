@@ -19,6 +19,8 @@ def index():
 @app.route("/about")
 def about():
     title = 'Apie mane'
+    time = datetime.datetime.now()
+
     return render_template(
         "about.html",
         title=title,
@@ -41,7 +43,6 @@ def portfolio():
         title=title,
         items=portfolio_items
     )
-
 
 if __name__ == '__main__':
     app.run()
