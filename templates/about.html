@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ title }}</h1>
+    <h1>{{ title }}</h1>
+
+    {% if name %}
+        <p>Sveikas, {{ name }}</p>
+    {% endif %}
 
     <ul>
 
@@ -11,4 +15,16 @@
         <li>Occupation: WEB developer</li>
     </ul>
 
+    <form action="/about" method="post">
+        <input type="text" name="contact-name" placeholder="Enter your name">
+        <br>
+
+        <input type="email" name="contact-email" placeholder="Enter email address">
+        <br>
+
+        <textarea name="contact-message" placeholder="Enter your message"></textarea>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
 {% endblock %}
