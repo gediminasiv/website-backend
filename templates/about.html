@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About me</title>
-    <link rel="stylesheet" href="/static/css/style.css" />
-</head>
-<body>
-    <h4>Menu:</h4>
-    <ul>
-        <li><a href="/">Main</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-    </ul>
+{% extends 'base.html' %}
 
-    <h1>This is page about me.</h1>
+{% block content %}
+<h1>This is page about me.</h1>
 
     <ul>
 
@@ -22,5 +10,5 @@
         <li>City: Vilnius, Lithuania</li>
         <li>Occupation: WEB developer</li>
     </ul>
-</body>
-</html>
+
+{% endblock %}
